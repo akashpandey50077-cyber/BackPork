@@ -71,3 +71,12 @@ This project is provided for educational and research purposes.
 - [idlesauce](https://github.com/idlesauce/) For the idea, code and support
 - [john-tornblom](https://github.com/john-tornblom) For the SDK 
 11@. ?
+
+To apply a patch:
+1. The library to patch must be decrypted (ELF format, not SELF)
+2. Use an online patcher like [RomPatcher.js](https://www.marcrobledo.com/RomPatcher.js/)
+3. Select the decrypted library as the ROM file
+4. Select the corresponding `.bps` patch file
+5. Apply the patch
+6. Fake sign the patched library ([make_fself.py](https://github.com/ps5-payload-dev/sdk/blob/master/samples/install_app/make_fself.py))
+7. Use the resulting library in your `fakelib` folder
