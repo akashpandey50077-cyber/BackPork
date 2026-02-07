@@ -70,4 +70,6 @@ This project is provided for educational and research purposes.
 
 - [idlesauce](https://github.com/idlesauce/) For the idea, code and support
 - [john-tornblom](https://github.com/john-tornblom) For the SDK 
-11@. ?
+11@. ?library sideloading.
+
+2## Overview№
