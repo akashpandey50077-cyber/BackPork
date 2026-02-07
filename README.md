@@ -1,14 +1,14 @@
-# PS5 BackPork 🐷
+1# PS5 BackPork 🐷
 
 A background payload for PlayStation 5 that automatically allows system library sideloading.
 
-## Overview
+2## Overview
 
 Backpork monitors game launches on the PS5. When a game (PPSA/CUSA title) is launched, it automatically mounts a `fakelib` folder from the game's app directory over the game's library path using unionfs. This allows for library replacement/injection without modifying originals files.
 
 Original concept and some code by idlesauce
 
-## How It Works
+3## How It Works
 
 1. **Game Launch Detection**: When a game is launched, it retrieves the app info to get the title ID (PPSA/CUSA format)
 2. **Sandbox Discovery**: Locates the game's sandbox directory at `/mnt/sandbox/<title_id>_XXX/`
@@ -16,12 +16,12 @@ Original concept and some code by idlesauce
 4. **Union Mount**: If fakelibs exist, mounts them over the game's `common/lib` directory using unionfs
 5. **Cleanup**: When the game exits, unmounts the fakelibs and cleans up the sandbox directory
 
-## Requirements
+4## Requirements
 
 - [PS5 Payload SDK](https://github.com/ps5-payload-dev/sdk)
 - A jailbroken PS5 with payload execution capability
 
-## Building
+5## Building
 
    ```bash
    export PS5_PAYLOAD_SDK=/path/to/sdk
@@ -37,15 +37,15 @@ Original concept and some code by idlesauce
 3. Launch your game - the fakelibs will be automatically mounted
 4. When the game closes, cleanup is performed automatically
 
-## Sideloading Libraries
+6## Sideloading Libraries
 
 The libraries you want to sideload must come from a firmware version compatible with the game you want to run. However, you cannot use them directly - they must be modified to remove dependencies that are not available on your current firmware, otherwise the loader will crash.
 
-### Best Practices
+7### Best Practices
 
 It is recommended to sideload as few libraries as possible, as there is no guarantee that there won't be side effects. Most games seem to only need the two Agc libraries, but some games like Minecraft required additional libraries.
 
-### Patching Libraries
+8### Patching Libraries
 
 I provide patches in the `patches/` folder (BPS format) to patch libraries from firmware 10.01 and make them functional on firmware 7.61. This is probably achievable for lower firmwares as well, but it has not been tested and would require additional patches.
 
@@ -58,15 +58,16 @@ To apply a patch:
 6. Fake sign the patched library ([make_fself.py](https://github.com/ps5-payload-dev/sdk/blob/master/samples/install_app/make_fself.py))
 7. Use the resulting library in your `fakelib` folder
 
-## Disclaimer
+9## Disclaimer
 
 This software is provided "as is", without warranty of any kind. I do not guarantee anything and I am not responsible for any damage or issues that may occur. Use at your own risk.
 
-## License
+10## License
 
 This project is provided for educational and research purposes.
 
-## Credits
+11## Credits
 
 - [idlesauce](https://github.com/idlesauce/) For the idea, code and support
-- [john-tornblom](https://github.com/john-tornblom) For the SDK
+- [john-tornblom](https://github.com/john-tornblom) For the SDK 
+11@. ?
