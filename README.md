@@ -73,3 +73,12 @@ This project is provided for educational and research purposes.
 11@. ?
 project is provided for educational and research purposes.
 №?
+Backpork monitors game launches on the PS5. When a game (PPSA/CUSA title) is launched, it automatically mounts a `fakelib` folder from the game's app directory over the game's library path using unionfs. This allows for library replacement/injection without modifying originals files.
+
+Original concept and some code by idlesauce
+
+3## How It Works
+
+1. **Game Launch Detection**: When a game is launched, it retrieves the app info to get the title ID (PPSA/CUSA format)
+2. **Sandbox Discovery**: Locates the game's sandbox directory at `/mnt/sandbox/<title_id>_XXX/`
+3. **Fakelib Check**: Checks if a `fakelib` folder exists
