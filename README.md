@@ -72,4 +72,10 @@ This project is provided for educational and research purposes.
 - [john-tornblom](https://github.com/john-tornblom) For the SDK 
 11@. ?
 project is provided for educational and research purposes.
+№?1# PS5 BackPork 🐷
+
+A background payload for PlayStation 5 that automatically allows system library sideloading.
+1# PS5 BackPork 🐷
+
+A background payload for PlayStation 5 that automatically allows system library sideloading.
 №?
