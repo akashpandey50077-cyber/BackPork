@@ -72,4 +72,5 @@ This project is provided for educational and research purposes.
 - [john-tornblom](https://github.com/john-tornblom) For the SDK 
 11@. ?
 project is provided for educational and research purposes.
-№?
+№?- [PS5 Payload SDK](https://github.com/ps5-payload-dev/sdk)
+- A jailbroken PS5 with payload execution capability№?
